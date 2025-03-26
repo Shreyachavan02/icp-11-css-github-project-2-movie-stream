@@ -1,198 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Streaming Service</title>
     <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-    }
-    body {
-        background-color: #111;
-        color: white;
-    }
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 50px;
-        background: black;
-        box-shadow: 0px 4px 8px rgba(255, 0, 0, 0.2);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-    .logo {
-        font-size: 24px;
-        font-weight: bold;
-        color: red;
-    }
-    .navbar ul {
-        list-style: none;
-        display: flex;
-    }
-    .navbar ul li {
-        margin: 0 15px;
-        display: inline-block;
-    }
-    .navbar ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 16px;
-        transition: color 0.3s;
-    }
-    .navbar ul li a:hover {
-        color: red;
-    }
-    .hero {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 80vh;
-        background: url('https://source.unsplash.com/1600x900/?movie') no-repeat center center/cover;
-        text-align: center;
-    }
-    .hero-content {
-        background: rgba(0, 0, 0, 0.6);
-        padding: 20px;
-        border-radius: 10px;
-    }
-    .hero h1 {
-        font-size: 50px;
-        margin-bottom: 10px;
-    }
-    .hero p {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-    .btn {
-        background: red;
-        color: white;
-        padding: 10px 20px;
-        font-size: 18px;
-        border: none;
-        cursor: pointer;
-        transition: background 0.3s;
-    }
-    .btn:hover {
-        background: darkred;
-    }
-    .movies, .featured, .latest {
-        padding: 20px;
-    }
-    .movies h2, .featured h2, .latest h2 {
-        margin-bottom: 10px;
-        text-align: center;
-    }
-    .movie-grid {
-        display: flex;
-        gap: 15px;
-        justify-content: center;
-    }
-    .movie {
-        width: 150px;
-        height: 200px;
-        background: gray;
-        display: inline-block;
-        box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
-        transition: transform 0.3s;
-    }
-    .movie:hover {
-        transform: scale(1.1);
-    }
-    .footer {
-        text-align: center;
-        padding: 20px;
-        background: black;
-    }
-    .footer ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        padding-top: 10px;
-    }
-    .footer ul li a {
-        color: white;
-        text-decoration: none;
-        transition: color 0.3s;
-    }
-    .footer ul li a:hover {
-        color: red;
-    }
-    @media (max-width: 768px) {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #111;
+            color: white;
+        }
+
         .navbar {
-            flex-direction: column;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
+            padding: 15px 50px;
+            background: black;
+            box-shadow: 0px 4px 8px rgba(255, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+            display: inline-block;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: red;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            background: url('https://source.unsplash.com/1600x900/?movie') no-repeat center center/cover;
+            text-align: center;
+        }
+
+        .hero-content {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: red;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: darkred;
+        }
+
+        .movies,
+        .featured,
+        .latest {
+            padding: 20px;
+        }
+
+        .movies h2,
+        .featured h2,
+        .latest h2 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
         .movie-grid {
-            flex-wrap: wrap;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
         }
-    }
-</style>
+
+        .movie {
+            width: 150px;
+            height: 200px;
+            background: gray;
+            display: inline-block;
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .movie:hover {
+            transform: scale(1.1);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: black;
+        }
+
+        .footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding-top: 10px;
+        }
+
+        .footer ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer ul li a:hover {
+            color: red;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .movie-grid {
+                flex-wrap: wrap;
+            }
+
+        }
+
+        .himg {
+            width:fit-content;
+            height: 900px;
+           
+            margin-top: 50px;
+            margin-bottom: 30px;
+
+        }
+
+        .btnn {
+            margin-left: 700px;
+            background: red;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+           
+        }
+    </style>
 </head>
-    <body>
-        <header class="navbar">
-            <div class="logo">StreamFlix</div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Movies</a></li>
-                    <li><a href="#">TV Shows</a></li>
-                    <li><a href="#">Sign In</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Unlimited Movies, TV Shows, and More.</h1>
-                <p>Watch anywhere. Cancel anytime.</p>
-                <button class="btn">Start Watching</button>
-            </div>
-        </section>
-        
-        <section class="movies">
-            <h2>Popular on StreamFlix</h2>
-            <div class="movie-grid">
-                <img class="movie" src="./images/popular1.jpeg">
-                <img class="movie" src="./images/popular2.jpeg">
-                <img class="movie" src="./images/popular3.jpeg">
-                <img class="movie" src="./images/popular4.jpeg">
-                <img class="movie" src="./images/popular5.jpeg">
-            </div>
-        </section>
-        
-        <section class="featured">
-            <h2>Featured Shows</h2>
-            <div class="movie-grid">
-                <img class="movie" src="./images/featured1.jpeg">
-                <img class="movie" src="./images/featured2.jpeg">
-                <img class="movie" src="./images/featured3.jpeg">
-                <img class="movie" src="./images/featured4.jpeg">
-                <img class="movie" src="./images/featured5.jpeg">
-                <img class="movie" src="./images/featured6.jpeg">
-            </div>
-        </section>
-        
-        <section class="latest">
-            <h2>Latest Releases</h2>
-            <div class="movie-grid">
-                <img class="movie" src="./images/latest1.jpeg">
-                <img class="movie" src="./images/latest2.jpeg">
-                <img class="movie" src="./images/latest3.jpeg">
-                <img class="movie" src="./images/latest4.jpeg">
-                <img class="movie" src="./images/latest5.jpeg">
-                <img class="movie" src="./images/latest6.jpeg">
-                <img class="movie" src="./images/latest7.jpeg">
-                <img class="movie" src="./images/latest8.jpeg">
-            </div>
-        </section>
-    
-    </body>
-    </html>
-    class="movie"
+
+<body>
+    <header class="navbar">
+        <div class="logo">StreamFlix</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+    <img src="./images/image1.webp" class="himg">
+    <button class="btnn">Watch now</button>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Unlimited Movies, TV Shows, and More.</h1>
+            <p>Watch anywhere. Cancel anytime.</p>
+            <button class="btn">Start Watching</button>
+        </div>
+    </section>
+
+    <section class="movies">
+        <h2>Popular on StreamFlix</h2>
+        <div class="movie-grid">
+            <img class="movie" src="./images/popular1.jpeg">
+            <img class="movie" src="./images/popular2.jpeg">
+            <img class="movie" src="./images/popular3.jpeg">
+            <img class="movie" src="./images/popular4.jpeg">
+            <img class="movie" src="./images/popular5.jpeg">
+        </div>
+    </section>
+
+    <section class="featured">
+        <h2>Featured Shows</h2>
+        <div class="movie-grid">
+            <img class="movie" src="./images/featured1.jpeg">
+            <img class="movie" src="./images/featured2.jpeg">
+            <img class="movie" src="./images/featured3.jpeg">
+            <img class="movie" src="./images/featured4.jpeg">
+            <img class="movie" src="./images/featured5.jpeg">
+            <img class="movie" src="./images/featured6.jpeg">
+        </div>
+    </section>
+
+    <section class="latest">
+        <h2>Latest Releases</h2>
+        <div class="movie-grid">
+            <img class="movie" src="./images/latest1.jpeg">
+            <img class="movie" src="./images/latest2.jpeg">
+            <img class="movie" src="./images/latest3.jpeg">
+            <img class="movie" src="./images/latest4.jpeg">
+            <img class="movie" src="./images/latest5.jpeg">
+            <img class="movie" src="./images/latest6.jpeg">
+            <img class="movie" src="./images/latest7.jpeg">
+            <img class="movie" src="./images/latest8.jpeg">
+        </div>
+    </section>
+
+</body>
+
+</html>
+class="movie"
