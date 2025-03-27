@@ -15,6 +15,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            margin-top: 15px;
         }
 
         .btn {
@@ -28,6 +29,34 @@
             transition: background 0.3s;
             border-radius: 4px;
 
+
+        }
+
+        .movies-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .movies {
+            padding: 20px;
+        }
+
+        .movies h2 {
+            margin-bottom: 10px;
+        }
+
+
+        .movie img {
+            width: 150px;
+            height: 225px;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .movie img:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -46,9 +75,57 @@
     </header>
     <div class="container">
         <h1>Featured Movie</h1>
-        <p>Watch the latest movies now!</p>
+        <p>Watch the latest movies now!</p><br>
         <button class="btn">Watch Now</button>
     </div>
+
+    <h2>Historical </h2><br>
+    <div class="movies-container">
+        <div class="movie"><img src="" alt="Movie 1"></div>
+        <div class="movie"><img src="movie2.jpg" alt="Movie 2"></div>
+        <div class="movie"><img src="movie3.jpg" alt="Movie 3"></div>
+        <div class="movie"><img src="movie4.jpg" alt="Movie 4"></div>
+        <div class="movie"><img src="movie5.jpg" alt="Movie 5"></div>
+        <div class="movie"><img src="movie6.jpg" alt="Movie 6"></div>
+    </div>
+
+    <h2>Thrillar</h2><br>
+    <div class="movies-container">
+        <div class="movie"><img src="movie1.jpg" alt="Movie 1"></div>
+        <div class="movie"><img src="movie2.jpg" alt="Movie 2"></div>
+        <div class="movie"><img src="movie3.jpg" alt="Movie 3"></div>
+        <div class="movie"><img src="movie4.jpg" alt="Movie 4"></div>
+        <div class="movie"><img src="movie5.jpg" alt="Movie 5"></div>
+        <div class="movie"><img src="movie6.jpg" alt="Movie 6"></div>
+    </div>
+    <h2>Korean drama</h2><br>
+    <div class="movies-container">
+        <div class="movie"><img src="" alt="Movie 1"></div>
+        <div class="movie"><img src="movie2.jpg" alt="Movie 2"></div>
+        <div class="movie"><img src="movie3.jpg" alt="Movie 3"></div>
+        <div class="movie"><img src="movie4.jpg" alt="Movie 4"></div>
+        <div class="movie"><img src="movie5.jpg" alt="Movie 5"></div>
+        <div class="movie"><img src="movie6.jpg" alt="Movie 6"></div>
+    </div>
+    <h2>Animation</h2><br>
+    <div class="movies-container">
+        <div class="movie"><img src="" alt="Movie 1"></div>
+        <div class="movie"><img src="movie2.jpg" alt="Movie 2"></div>
+        <div class="movie"><img src="movie3.jpg" alt="Movie 3"></div>
+        <div class="movie"><img src="movie4.jpg" alt="Movie 4"></div>
+        <div class="movie"><img src="movie5.jpg" alt="Movie 5"></div>
+        <div class="movie"><img src="movie6.jpg" alt="Movie 6"></div>
+    </div>
+    <h2>Horror</h2><br>
+    <div class="movies-container">
+        <div class="movie"><img src="" alt="Movie 1"></div>
+        <div class="movie"><img src="movie2.jpg" alt="Movie 2"></div>
+        <div class="movie"><img src="movie3.jpg" alt="Movie 3"></div>
+        <div class="movie"><img src="movie4.jpg" alt="Movie 4"></div>
+        <div class="movie"><img src="movie5.jpg" alt="Movie 5"></div>
+        <div class="movie"><img src="movie6.jpg" alt="Movie 6"></div>
+    </div>
+    
 </body>
 
 </html>
