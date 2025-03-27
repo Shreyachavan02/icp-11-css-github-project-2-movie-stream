@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Sign Up</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            background-color: black;
+            color:black;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            position: relative;
+            background-color:red;
+            padding: 40px;
+            width: 450px;
+            border-radius: 5px;
+            color: rgb(239, 232, 232);
+            text-align: center;
+            border-color: black;
+            border-radius: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+        button {
+            width: 150px;
+            padding: 10px;
+            background: rgb(17, 17, 17);
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkred;
+        }
+        p {
+            margin-top: 10px;
+        }
+        a {
+            color: red;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .p{
+            color: aliceblue;
+        }
+        .Ib1{
+            background-color: black;
+            color: aliceblue;
+            height: 40px;
+            width: 300px;
+            border: solid black;
+            border-radius: 5px;
+            margin-top: 10px;
+            padding: 5px;
+            transition: background 0.3s;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+        }
+        .btn{
+            width: 150px;
+            padding: 10px;
+            background: rgb(17, 17, 17);
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+           margin-left: 65px;
+
+
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">StreamFlix</div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="../pages/movies.html">Movies</a></li>
+                <li><a href="../pages/tvshow.html">TV Shows</a></li>
+                <li><a href="../pages/signin.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form>
+            <input type="email" name="email" placeholder="Email" required class="Ib1">
+            <input type="password" name="password" placeholder="Password" required class="Ib1">
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="../pages/signin.html" class="p">Sign In</a></p>
+    </div>
+</body>
+</html>
