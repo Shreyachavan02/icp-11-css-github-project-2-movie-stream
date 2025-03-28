@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
     <style>
         body {
             background-color: black;
-            color:black;
+            color: black;
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
@@ -16,9 +17,10 @@
             height: 100vh;
             margin: 0;
         }
+
         .container {
             position: relative;
-            background-color:red;
+            background-color: red;
             padding: 40px;
             width: 450px;
             border-radius: 5px;
@@ -27,19 +29,23 @@
             border-color: black;
             border-radius: 20px;
         }
+
         h1 {
             margin-bottom: 20px;
         }
+
         form {
             display: flex;
             flex-direction: column;
         }
+
         input {
             margin: 10px 0;
             padding: 10px;
             border: none;
             border-radius: 4px;
         }
+
         button {
             width: 150px;
             padding: 10px;
@@ -50,23 +56,29 @@
             font-size: 16px;
             cursor: pointer;
         }
+
         button:hover {
             background-color: darkred;
         }
+
         p {
             margin-top: 10px;
         }
+
         a {
             color: red;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
-        .p{
+
+        .p {
             color: aliceblue;
         }
-        .Ib1{
+
+        .Ib1 {
             background-color: black;
             color: aliceblue;
             height: 40px;
@@ -79,7 +91,8 @@
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 
         }
-        .btn{
+
+        .btn {
             width: 150px;
             padding: 10px;
             background: rgb(17, 17, 17);
@@ -89,12 +102,25 @@
             font-size: 16px;
             cursor: pointer;
             transition: background 0.3s;
-           margin-left: 65px;
+            margin-left: 65px;
 
+
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .movie-grid {
+                flex-wrap: wrap;
+            }
 
         }
     </style>
 </head>
+
 <body>
     <header class="navbar">
         <div class="logo">MovieStream</div>
@@ -116,5 +142,7 @@
         </form>
         <p>Already have an account? <a href="../pages/signin.html" class="p">Sign In</a></p>
     </div>
+    <hr>
 </body>
+
 </html>
