@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Service</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .video {
+            margin-top: 250px;
+            margin-left: 50PX;
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 560;
+            height: 315;
+        }
+
+        .para {
+
+            color: white;
+            margin-top: 150px;
+            margin-bottom: 60PX;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .movie-grid {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">MovieStream</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/movies.html">Movies</a></li>
+                <li><a href="../pages/tvshow.html">TV Shows</a></li>
+                <li><a href="../pages/signin.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>Stranger Things - Season 1 Trailer</h2>
+
+    <p class="para">
+        Stranger Things: The Series premiered on Netflix on October 25, 2016. <br>
+        The series follows a group of survivors from a past, who find themselves in a small town in the Amazon
+        jungle.<br>
+        Their mission is to find a way to save humanity from extinction.<br>
+    </p>
+    <iframe src="https://www.youtube.com/embed/b9EkMc79ZSU?autoplay=1&mute=1" frameborder="0" allowfullscreen
+        class="video">
+    </iframe>
+
+
+
+</body>
+
+</html>
